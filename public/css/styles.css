@@ -1,0 +1,23 @@
+
+/* .box-logo{
+    border-radius: 7px;
+    background: rgb(29, 29, 29);
+    padding:7px 15px;
+    box-shadow: 2px 2px 5px rgb(146, 133, 119);
+}
+
+.logo{
+    color:rgb(240, 240, 240);
+    font-size: 19px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgb(6, 6, 6);
+}
+
+.box-logo:hover .logo{
+    color:white;
+} */
+
+
+.logo{
+    text-shadow: 2px 2px 5px rgb(157, 156, 156);
+}
