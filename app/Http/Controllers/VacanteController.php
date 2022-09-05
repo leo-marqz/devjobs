@@ -13,7 +13,7 @@ class VacanteController extends Controller
      */
     public function index()
     {
-        //
+        return view('vacantes.index');
     }
 
     /**
