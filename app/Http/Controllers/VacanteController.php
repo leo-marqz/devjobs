@@ -13,7 +13,7 @@ class VacanteController extends Controller
      */
     public function index()
     {
-        return view('vacantes.index');
+        return view('vacancies.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class VacanteController extends Controller
      */
     public function create()
     {
-        return view('vacantes.create');
+        return view('vacancies.create');
     }
 
     /**
