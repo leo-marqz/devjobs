@@ -11,4 +11,6 @@ class Alert extends Component
     {
         return view('livewire.alert');
     }
+
+    
 }
