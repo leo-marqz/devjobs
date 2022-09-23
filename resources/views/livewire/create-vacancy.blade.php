@@ -11,8 +11,8 @@
             id="title"
             class="block mt-1 w-full"
             type="text"
-            wire:model="titulo"
-            :value="old('titulo')"
+            wire:model="title"
+            :value="old('title')"
             placeholder="Titulo de la vacante"
         />
         @error('title')
@@ -66,14 +66,14 @@
         <x-label for="lastDayApply" :value="__('Fecha limite para postularse')" />
 
         <x-input
-            id="lastDayApply"
+            id="last_day_apply"
             class="block mt-1 w-full"
             type="date"
-            wire:model="lastDayApply"
-            :value="old('lastDayApply')"
+            wire:model="last_day_apply"
+            :value="old('last_day_apply')"
             placeholder="Titulo de la vacante"
         />
-        @error('lastDayApply')
+        @error('last_day_apply')
             <livewire:alert :message="$message" />
         @enderror
     </div>

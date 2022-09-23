@@ -14,7 +14,7 @@ class CreateVacancy extends Component
     public $salary;
     public $category;
     public $company;
-    public $lastDayApply;
+    public $last_day_apply;
     public $description;
     public $image;
     protected $rules = [
@@ -22,7 +22,7 @@ class CreateVacancy extends Component
         'salary'=>'required',
         'category'=>'required',
         'company'=>'required|string',
-        'lastDayApply'=>'required',
+        'last_day_apply'=>'required',
         'description'=>'required|string',
         'image'=>'required|image|max:1024'
     ];
