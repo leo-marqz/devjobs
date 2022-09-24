@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Vacancy;
 
 class VacanteController extends Controller
 {
@@ -13,7 +14,7 @@ class VacanteController extends Controller
      */
     public function index()
     {
-
+        $this->authorize('viewAny', Vacancy::class);
         return view('vacancies.index');
     }
 
@@ -24,19 +25,11 @@ class VacanteController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Vacancy::class);
         return view('vacancies.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+
 
     /**
      * Display the specified resource.
@@ -44,9 +37,9 @@ class VacanteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Vacancy $vacancy)
     {
-        //
+        return view('vacancies.show', ['vacancy'=>$vacancy]);
     }
 
     /**
@@ -55,31 +48,10 @@ class VacanteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Vacancy $vacancy)
     {
-        //
+        $this->authorize('update', $vacancy);
+        return view('vacancies.edit', ['vacancy'=>$vacancy]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

@@ -16,24 +16,64 @@ class CategoriesSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            'category'=> 'Backend Developer',
+            'category'=> 'React Native Developer',
             'created_at'=> date('Y-m-d H:i:s'),
             'updated_at'=> date('Y-m-d H:i:s'),
         ]);
         DB::table('categories')->insert([
-            'category'=> 'Front-End Developer',
+            'category'=> 'Sr UX Designer',
             'created_at'=> date('Y-m-d H:i:s'),
             'updated_at'=> date('Y-m-d H:i:s'),
         ]);
         DB::table('categories')->insert([
-            'category'=> 'Mobile Developer',
+            'category'=> 'Jr UX Designer',
             'created_at'=> date('Y-m-d H:i:s'),
             'updated_at'=> date('Y-m-d H:i:s'),
         ]);
         DB::table('categories')->insert([
-            'category'=> 'Software Engineer',
+            'category'=> 'React Js Engineer',
             'created_at'=> date('Y-m-d H:i:s'),
             'updated_at'=> date('Y-m-d H:i:s'),
         ]);
+        DB::table('categories')->insert([
+            'category'=> 'QA Engineer',
+            'created_at'=> date('Y-m-d H:i:s'),
+            'updated_at'=> date('Y-m-d H:i:s'),
+        ]);
+        DB::table('categories')->insert([
+            'category'=> 'IT Product Manager',
+            'created_at'=> date('Y-m-d H:i:s'),
+            'updated_at'=> date('Y-m-d H:i:s'),
+        ]);
+        DB::table('categories')->insert([
+            'category'=> 'Java Developer',
+            'created_at'=> date('Y-m-d H:i:s'),
+            'updated_at'=> date('Y-m-d H:i:s'),
+        ]);
+        // DB::table('categories')->insert([
+        //     'category'=> '',
+        //     'created_at'=> date('Y-m-d H:i:s'),
+        //     'updated_at'=> date('Y-m-d H:i:s'),
+        // ]);
+        // DB::table('categories')->insert([
+        //     'category'=> 'Backend Developer',
+        //     'created_at'=> date('Y-m-d H:i:s'),
+        //     'updated_at'=> date('Y-m-d H:i:s'),
+        // ]);
+        // DB::table('categories')->insert([
+        //     'category'=> 'Front-End Developer',
+        //     'created_at'=> date('Y-m-d H:i:s'),
+        //     'updated_at'=> date('Y-m-d H:i:s'),
+        // ]);
+        // DB::table('categories')->insert([
+        //     'category'=> 'Mobile Developer',
+        //     'created_at'=> date('Y-m-d H:i:s'),
+        //     'updated_at'=> date('Y-m-d H:i:s'),
+        // ]);
+        // DB::table('categories')->insert([
+        //     'category'=> 'Software Engineer',
+        //     'created_at'=> date('Y-m-d H:i:s'),
+        //     'updated_at'=> date('Y-m-d H:i:s'),
+        // ]);
     }
 }

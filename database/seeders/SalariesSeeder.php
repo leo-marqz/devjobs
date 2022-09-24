@@ -15,28 +15,53 @@ class SalariesSeeder extends Seeder
      */
     public function run()
     {
+        // DB::table('salaries')->insert([
+        //     'salary'=>'$300 - $499',
+        //     'created_at'=>date('Y-m-d H:i:s'),
+        //     'updated_at'=>date('Y-m-d H:i:s')
+        // ]);
+        // DB::table('salaries')->insert([
+        //     'salary'=>'$475 - $600',
+        //     'created_at'=>date('Y-m-d H:i:s'),
+        //     'updated_at'=>date('Y-m-d H:i:s')
+        // ]);
+        // DB::table('salaries')->insert([
+        //     'salary'=>'$500 - $750',
+        //     'created_at'=>date('Y-m-d H:i:s'),
+        //     'updated_at'=>date('Y-m-d H:i:s')
+        // ]);
+        // DB::table('salaries')->insert([
+        //     'salary'=>'$700 - $900',
+        //     'created_at'=>date('Y-m-d H:i:s'),
+        //     'updated_at'=>date('Y-m-d H:i:s')
+        // ]);
+        // DB::table('salaries')->insert([
+        //     'salary'=>'$1000 - $1100',
+        //     'created_at'=>date('Y-m-d H:i:s'),
+        //     'updated_at'=>date('Y-m-d H:i:s')
+        // ]);
         DB::table('salaries')->insert([
-            'salary'=>'$300 - $499',
+            'salary'=>'$1500 - $2000',
             'created_at'=>date('Y-m-d H:i:s'),
             'updated_at'=>date('Y-m-d H:i:s')
         ]);
         DB::table('salaries')->insert([
-            'salary'=>'$475 - $600',
+            'salary'=>'$2000 - $3500',
             'created_at'=>date('Y-m-d H:i:s'),
             'updated_at'=>date('Y-m-d H:i:s')
         ]);
         DB::table('salaries')->insert([
-            'salary'=>'$500 - $750',
+            'salary'=>'$5000 - $5100',
             'created_at'=>date('Y-m-d H:i:s'),
             'updated_at'=>date('Y-m-d H:i:s')
         ]);
         DB::table('salaries')->insert([
-            'salary'=>'$700 - $900',
+            'salary'=>'$30000 - $31000',
             'created_at'=>date('Y-m-d H:i:s'),
             'updated_at'=>date('Y-m-d H:i:s')
         ]);
         DB::table('salaries')->insert([
-            'salary'=>'$1000 - $1100',
+            'salary'=>'$100000 - $105000',
             'created_at'=>date('Y-m-d H:i:s'),
             'updated_at'=>date('Y-m-d H:i:s')
         ]);
