@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Vacancy;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use App\Notifications\NewCandidate;
 
 class ApplyForVacancy extends Component
 {
@@ -35,6 +36,11 @@ class ApplyForVacancy extends Component
         ]);
 
         // crear notificacion y enviar email
+        $this->vacancy->recruiter->notify(new NewCandidate(
+            $this->vacancy->id,
+            $this->vacancy->title,
+            auth()->user()->id
+        ));
 
         // Mostrar al usuario un mensaje ok
         session()->flash('message', 'Se envio tu aplicación correctamente, mucha suerte!!!');

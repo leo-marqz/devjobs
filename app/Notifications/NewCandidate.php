@@ -11,14 +11,19 @@ class NewCandidate extends Notification
 {
     use Queueable;
 
+    protected $vacancyId;
+    protected $vacancyTitle;
+    protected $userId;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($vacancyId, $vacancyTitle, $userId)
     {
-        //
+        $this->vacancyId = $vacancyId;
+        $this->vacancyTitle = $vacancyTitle;
+        $this->userId = $userId;
     }
 
     /**
@@ -29,7 +34,7 @@ class NewCandidate extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail', 'database'];
     }
 
     /**
@@ -40,16 +45,22 @@ class NewCandidate extends Notification
      */
     public function toMail($notifiable)
     {
+        $url = url('/notifications');
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+                    ->line('Hay un nuevo candidato en tu vacante!!')
+                    ->line('Vacante: ' . $this->vacancyTitle)
+                    ->action('Ver Notificaciones',$url)
+                    ->line('Gracias por usar DevJobs!');
     }
 
     // almacenar las notificiones en la base de datos
     public function toDatabase($notifiable)
     {
-
+        return [
+            'vacancy_id' => $this->vacancyId,
+            'vacancy_title' => $this->vacancyTitle,
+            'user_id' => $this->userId
+        ];
     }
 
     // /**
