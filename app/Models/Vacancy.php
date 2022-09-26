@@ -26,9 +26,14 @@ class Vacancy extends Model
     {
         return $this->belongsTo(Category::class);
     }
-    public function Salary()
+    public function salary()
     {
         return $this->belongsTo(Salary::class);
+    }
+
+    public function candidates()
+    {
+        return $this->hasMany(Candidate::class);
     }
 
 }

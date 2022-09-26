@@ -47,4 +47,8 @@
         </div>
     @endguest
 
+    @cannot('create', App\Models\Vacancy::class)
+        <livewire:apply-for-vacancy :vacancy="$vacancy" />
+    @endcan
+
 </div>
