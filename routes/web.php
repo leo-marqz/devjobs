@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\VacanteController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,6 @@ Route::get('/vacancies/create',[VacanteController::class, 'create'])->middleware
 Route::get('/vacancies/{vacancy}/edit',[VacanteController::class, 'edit'])->middleware(['auth', 'verified'])->name('vacancies.edit');
 Route::get('/vacancies/{vacancy}',[VacanteController::class, 'show'])->name('vacancies.show');
 
-
+Route::get('/notifications', NotificationController::class);
 
 require __DIR__.'/auth.php';
