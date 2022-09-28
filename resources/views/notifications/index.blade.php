@@ -12,34 +12,36 @@
                     <h1 class=" text-3xl font-bold mb-7 py-10 text-center">Mis Notificaciones</h1>
 
 
-                    @forelse ($notifications as $notification)
-                      <div class="p-5 border border-gray-200 md:flex md:justify-between md:items-center">
-                        <div>
-                            <p>
-                                Tienes un nuevo candidato en:
-                                <span class="font-bold ">
-                                    {{$notification->data['vacancy_title']}}
-                                </span>
-                            </p>
-                            <p>
-                                Hace:
-                                <span class="font-bold ">
-                                    {{$notification->created_at->diffForHumans()}}
-                                </span>
-                            </p>
-                        </div>
-                        <div class="mt-5 md:mt-0">
-                            <a
-                                class="text-bold text-sm bg-gray-900 text-white border p-3 rounded-lg"
-                                href="#"
-                            >
-                                Ver candidatos
-                            </a>
-                        </div>
-                      </div>
-                    @empty
-                      <p class="text-center text-gray-600">No hay notificaciones</p>
-                    @endforelse
+                    <div class="divide-y divide-gray-200">
+                        @forelse ($notifications as $notification)
+                          <div class="p-5 md:flex md:justify-between md:items-center">
+                            <div>
+                                <p>
+                                    Tienes un nuevo candidato en:
+                                    <span class="font-bold ">
+                                        {{$notification->data['vacancy_title']}}
+                                    </span>
+                                </p>
+                                <p>
+                                    Hace:
+                                    <span class="font-bold ">
+                                        {{$notification->created_at->diffForHumans()}}
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="mt-5 md:mt-0">
+                                <a
+                                    class="text-bold text-sm bg-indigo-700 hover:bg-indigo-600 text-white border p-3 rounded-lg"
+                                    href="{{route('candidates.index', $notification->data['vacancy_id'])}}"
+                                >
+                                    Ver candidatos
+                                </a>
+                            </div>
+                          </div>
+                        @empty
+                          <p class="text-center text-gray-600">No hay notificaciones</p>
+                        @endforelse
+                    </div>
 
                 </div>
             </div>

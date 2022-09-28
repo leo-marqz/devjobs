@@ -16,8 +16,8 @@
                     </p>
                 </div>
                 <div class="flex gap-3 items-center mt-3 md:mt-0">
-                    <a href="#" class="text-sm bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-lg text-white font-bold uppercase">
-                        Candidatos
+                    <a href="{{route('candidates.index', $vacancy)}}" class="text-sm bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-lg text-white font-bold uppercase">
+                        {{$vacancy->candidates->count()}} Candidatos
                     </a>
                     <a href="{{route('vacancies.edit', $vacancy)}}" class="text-sm bg-sky-600 hover:bg-sky-500 py-2 px-4 rounded-lg text-white font-bold uppercase">
                         Editar
